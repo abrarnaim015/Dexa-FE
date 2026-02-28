@@ -51,6 +51,13 @@ export default function AdminUserEdit() {
     }
   };
 
+  const formatPhoneNumber = (value: string) => {
+    const digits = value.replace(/\D/g, ""); // numeric only
+    const limited = digits.slice(0, 15); // max 15 digit
+
+    return limited.match(/.{1,4}/g)?.join("-") || "";
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 px-4 py-6">
       <div className="w-full max-w-md mx-auto space-y-6">
@@ -108,9 +115,12 @@ export default function AdminUserEdit() {
               id="phoneNumber"
               type="tel"
               value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => {
+                const formatted = formatPhoneNumber(e.target.value);
+                setPhoneNumber(formatted);
+              }}
               className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
-              placeholder="e.g. 08123456789"
+              placeholder="e.g. 0812-3456-7890"
             />
           </div>
 
