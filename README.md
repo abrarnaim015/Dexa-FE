@@ -247,7 +247,11 @@ The backend service must be running and accessible.
 This frontend emphasizes clarity, correctness, and intentional engineering decisions.  
 The admin notification system demonstrates event-driven thinking, performance-aware polling, and thoughtful UX design.
 
-20. FINAL NOTES
+20. FLOW CHART DIAGRAM
+
+![Diagram flow chart](./public/Flowchard.jpeg)
+
+21. FINAL NOTES
 
 This frontend is designed to be easy to review, easy to reason about, and clear in its architectural decisions.
 Thank you for reviewing this technical test.
