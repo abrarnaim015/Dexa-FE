@@ -11,7 +11,6 @@ export default function ProfileUpdatePhoto() {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { me, loading, error } = useAppSelector((state) => state.user);
-  console.log(me, "<<<<<");
 
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);

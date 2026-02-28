@@ -15,23 +15,6 @@ const initialState: AttendanceState = {
   error: null,
 };
 
-// export const fetchMyAttendance = createAsyncThunk<
-//   any[],
-//   void,
-//   { rejectValue: string }
-// >("attendance/fetchMyAttendance", async (_, { rejectWithValue }) => {
-//   try {
-//     const response = await api.get<any[]>("/attendance/me");
-//     return response.data;
-//   } catch (error: any) {
-// const message =
-//   error?.response?.data?.message ||
-//   error?.message ||
-//   "Failed to load attendance.";
-// return rejectWithValue(message);
-//   }
-// });
-
 export const fetchMyAttendance = createAsyncThunk(
   "attendance/fetchMyAttendance",
   async (
